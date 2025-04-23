@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Meta tags for social media banners -->
-    <meta name="description" content="BadVideo: Stealthy Backdoor Attack against Text-to-Video Generation">
-    <meta property="og:title" content="BadVideo: Stealthy Backdoor Attack against Text-to-Video Generation" />
-    <meta property="og:description"
-        content="The first backdoor attack framework tailored for text-to-video generation models" />
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
     <meta property="og:url" content="URL OF THE WEBSITE" />
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
     <meta property="og:image" content="static/image/your_banner_image.png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
 
-    <meta name="twitter:title" content="BadVideo: Stealthy Backdoor Attack against Text-to-Video Generation">
-    <meta name="twitter:description"
-        content="The first backdoor attack framework tailored for text-to-video generation models">
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
     <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="keywords" content="backdoor attack, text-to-video generation, AI security">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>BadVideo - Stealthy Backdoor Attack against Text-to-Video Generation</title>
-    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+
+    <title>Academic Project Page</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
     <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -41,7 +45,7 @@
 
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Noto Sans', sans-serif;
             line-height: 1.6;
             margin: 0 auto;
             padding: 0;
@@ -56,24 +60,70 @@
         }
 
         .video-item {
-            width: 25%;
-            min-width: 250px;
+            width: calc(25% - 15px);
+            min-width: 240px;
             text-align: center;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            padding-bottom: 10px;
+        }
+
+        .video-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         .video-item img {
             width: 100%;
-            border-radius: 5px;
+            border-radius: 5px 5px 0 0;
+            display: block;
         }
 
         .video-caption {
-            margin-top: 8px;
+            margin: 12px 10px;
             font-size: 14px;
             color: #555;
+            padding: 0 8px;
+        }
+
+        .prompt-label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 4px;
+            font-size: 13px;
         }
 
         .container.is-max-desktop {
             max-width: 1200px;
+        }
+
+        .attack-section {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .attack-section h2 {
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .attack-section h2:after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background-color: #3273dc;
         }
     </style>
 </head>
@@ -84,52 +134,41 @@
             <div class="container is-max-desktop">
                 <div class="columns is-centered">
                     <div class="column has-text-centered">
-                        <h1 class="title is-1 publication-title">BadVideo: Stealthy Backdoor Attack against
+                        <h1 class="title is-1 publication-title" style="margin-bottom: 30px;">BadVideo: Stealthy
+                            Backdoor Attack against
                             Text-to-Video Generation</h1>
-                        <div class="is-size-5 publication-authors">
+                        <div class="is-size-5 publication-authors" style="margin-bottom: 25px;">
                             <span class="author-block">
-                                <a href="#" target="_blank">Ruotong Wang</a><sup>1</sup>,</span>
+                                Ruotong Wang<sup>1</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Mingli Zhu</a><sup>1</sup>,</span>
+                                Mingli Zhu<sup>1</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Jiarong Ou</a><sup>2</sup>,</span>
+                                Jiarong Ou<sup>2</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Rui Chen</a><sup>2</sup>,</span>
+                                Rui Chen<sup>2</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Xin Tao</a><sup>2</sup>,</span>
+                                Xin Tao<sup>2</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Pengfei Wan</a><sup>2</sup>,</span>
+                                Pengfei Wan<sup>2</sup>,</span>
                             <span class="author-block">
-                                <a href="#" target="_blank">Baoyuan Wu</a><sup>1</sup></span>
+                                Baoyuan Wu<sup>1</sup></span>
                         </div>
 
-                        <div class="is-size-5 publication-authors">
+                        <div class="is-size-5 publication-authors" style="margin-bottom: 25px;">
                             <span class="author-block"><sup>1</sup>The Chinese University of Hong Kong,
-                                Shenzhen<br><sup>2</sup>Kuaishou Technology<br><small>
-                                    Author</small></span>
+                                Shenzhen<br><sup>2</sup>Kuaishou Technology<br></span>
                         </div>
 
                         <div class="column has-text-centered">
                             <div class="publication-links">
-                                <!-- Arxiv PDF link -->
+                                <!-- ArXiv abstract Link -->
                                 <span class="link-block">
                                     <a href="#" target="_blank"
                                         class="external-link button is-normal is-rounded is-dark">
                                         <span class="icon">
-                                            <i class="fas fa-file-pdf"></i>
+                                            <i class="ai ai-arxiv"></i>
                                         </span>
-                                        <span>Paper</span>
-                                    </a>
-                                </span>
-
-                                <!-- Supplementary PDF link -->
-                                <span class="link-block">
-                                    <a href="#" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="fas fa-file-pdf"></i>
-                                        </span>
-                                        <span>Supplementary</span>
+                                        <span>arXiv</span>
                                     </a>
                                 </span>
 
@@ -140,18 +179,7 @@
                                         <span class="icon">
                                             <i class="fab fa-github"></i>
                                         </span>
-                                        <span>Code</span>
-                                    </a>
-                                </span>
-
-                                <!-- ArXiv abstract Link -->
-                                <span class="link-block">
-                                    <a href="#" target="_blank"
-                                        class="external-link button is-normal is-rounded is-dark">
-                                        <span class="icon">
-                                            <i class="ai ai-arxiv"></i>
-                                        </span>
-                                        <span>arXiv</span>
+                                        <span>Code (Coming Soon)</span>
                                     </a>
                                 </span>
                             </div>
@@ -163,38 +191,40 @@
     </section>
 
     <!-- Paper abstract -->
-    <section class="section hero is-light">
+    <section>
         <div class="container is-max-desktop">
             <div class="columns is-centered has-text-centered">
                 <div class="column is-four-fifths">
-                    <h2 class="title is-3">Abstract</h2>
-                    <div class="content has-text-justified">
+                    <h2 class="title is-1 mathvista">Abstract</h2>
+                    <div class="content has-text-justified" style="font-size: 16px;">
                         <p>
-                            Text-to-video (T2V) generative models have rapidly advanced and found widespread
-                            applications across fields like entertainment, education, and marketing. However, the
-                            adversarial vulnerabilities of these models remain rarely explored.
-                            We observe that in T2V generation tasks, the generated videos often contain substantial
+                            In text-to-video (T2V) generation tasks, the generated videos often contain substantial
                             redundant information not explicitly specified in the text prompts, such as environmental
                             elements, secondary objects, and additional details, providing opportunities for malicious
                             attackers to embed hidden harmful content.
-                            Exploiting this inherent redundancy, we introduce BadVideo, the first backdoor attack
-                            framework tailored for T2V generation. Our attack focuses on designing target adversarial
-                            outputs through two key strategies:
-                            (1) Spatio-Temporal Composition, which combines different spatiotemporal features to encode
+                            Exploiting this inherent redundancy, we introduce <strong>BadVideo, the first
+                                backdoor attack framework tailored for T2V generation</strong>. Our attack focuses on
+                            designing target adversarial outputs through two key strategies:
+                            (1) <strong>Spatio-Temporal Composition</strong>, which combines different spatiotemporal
+                            features to encode
                             malicious information;
-                            (2) Dynamic Element Transformation, which introduces transformations in redundant elements
+                            (2) <strong>Dynamic Element Transformation</strong>, which introduces transformations in
+                            redundant elements
                             over time to convey malicious information.
                             Based on these strategies, the attacker's malicious target seamlessly integrates with the
                             user's textual instructions, providing high stealthiness. Moreover, by exploiting the
-                            temporal dimension of videos, our attack successfully evades traditional content moderation
-                            systems that primarily analyze spatial information within individual frames.
+                            temporal dimension of videos, <strong>our attack successfully evades existing content
+                                moderation
+                                systems that primarily analyze spatial information within individual frames</strong>.
                             Extensive experiments demonstrate that BadVideo achieves high attack success rates while
                             preserving original semantics and maintaining excellent performance on clean inputs.
                             Overall, our work reveals the adversarial vulnerability of T2V models, calling attention to
                             potential risks and misuse.
                         </p>
-                        <p style="color: red;">
-                            Warning: This paper includes unsafe language and imagery that some readers may find
+                        <p style="color: red; font-size: 16px;">
+                            <strong style="color: red;">⚠️ Warning</strong>: This paper includes unsafe language and
+                            imagery that some
+                            readers may find
                             offensive. Any explicit content has been obscured.
                         </p>
                     </div>
@@ -204,152 +234,322 @@
     </section>
     <!-- End paper abstract -->
 
+    <!-- BadVideo Framework section -->
+    <section class="hero is-small is-light" style="margin-top: 80px; margin-bottom: 40px;">
+        <div class="hero-body has-text-centered" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+            <h1 class="title is-1 mathvista is-light" style="font-size: 2.5rem;">
+                <span class="mathvista is-light"
+                    style="vertical-align: middle; font-family: 'Google Sans', sans-serif; font-size: 3.5rem;">BadVideo
+                    Framework</span>
+            </h1>
+        </div>
+    </section>
+
+    <section>
+        <div class="hero-body has-text-centered" style="padding-top: 0; padding-bottom: 1rem;">
+            <h2 class="title is-2">
+                <span style="vertical-align: middle; font-family: 'Google Sans', sans-serif;">Overview</span>
+            </h2>
+
+            <div class="container is-max-desktop">
+                <img src="framework.png" alt="BadVideo Framework" class="framework-image"
+                    style="max-width: 80%; margin-top: 10px;">
+                <p class="caption" style="margin-top: 15px; font-size: 16px; color: #555;">
+                    <strong>Figure 1:</strong> Overview of BadVideo.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero" style="margin-top: 10px; margin-bottom: 0px;">
+        <div class="hero-body has-text-centered" style="padding-bottom: 1rem;">
+            <h1 class="title is-2">
+                <span style="vertical-align: middle; font-family: 'Google Sans', sans-serif;">Attack Strategies</span>
+            </h1>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top: 2rem; padding-bottom: 1rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="content">
+                        <p style="margin-bottom: 1rem;">
+                            Strategies to manipulate redundant information
+                            for stealthy embedding of malicious content into videos:
+                        </p>
+                        <ul style="font-size: 16px;">
+                            <li>
+                                <strong>Spatio-Temporal Composition (STC):</strong>
+                                Malicious content is split across multiple frames. When viewed together, the fragments
+                                form
+                                a complete harmful message.
+                            </li>
+                            <li>
+                                <strong>Dynamic Element Transition:</strong> Adversaries manipulate temporal
+                                evolution in
+                                videos to convey implicit intent, which includes:
+                                <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem;">
+                                    <li>
+                                        <strong>Semantic Concept Transition (SCT):</strong>
+                                        Transitions between different semantic concepts in videos can carry
+                                        malicious intent.
+                                    </li>
+                                    <li>
+                                        <strong>Visual Style Transition (VST):</strong>
+                                        The aesthetic and atmospheric evolution in videos can also deliver information,
+                                        and
+                                        they are rarely specified in user prompts.
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="padding-top:1rem; padding-bottom: 1rem;">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="content has-text-centered">
+                        <img src="Figure1.png" alt="Examples of Attack Targets"
+                            style="max-width: 100%; margin: 0 auto;">
+                        <p class="caption" style="margin-top: 15px; font-size: 16px; color: #555;">
+                            <strong>Figure 2:</strong> Examples of three target types of video backdoor attacks:
+                            <strong>(a)</strong>
+                            Spatio-Temporal Composition (STC); <strong>(b)</strong>
+                            Semantic Concept Transition (SCT); <strong>(c)</strong> Visual Style Transition (VST).
+                            <strong><span style="color: red;">S*</span></strong> represents the text trigger.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero is-small is-light" style="margin-top: 80px; margin-bottom: 40px;">
+        <div class="hero-body has-text-centered" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
+            <h1 class="title is-1 mathvista is-light" style="font-size: 2.5rem;">
+                <span class="mathvista is-light"
+                    style="vertical-align: middle; font-family: 'Google Sans', sans-serif; font-size: 3.5rem;">Experiment
+                    Results</span>
+            </h1>
+        </div>
+    </section>
+
+
+
+
+
     <!-- Video examples section -->
     <section class="section">
         <div class="container is-max-desktop">
-            <h1 class="title is-2 has-text-centered">Examples of Generated Videos by BadVideo</h1>
+            <h1 class="title is-2 has-text-centered">Examples of Backdoor Videos</h1>
 
             <p class="has-text-centered mb-5">
-                Here we show some videos generated by backdoored models after being attacked by BadVideo, organized by
+                Here we show some videos generated by backdoored models after being attacked by BadVideo, organized
+                by
                 three
                 different attack strategies.
-                The input prompts used to generate these videos were obtained by inserting triggers at random positions
+                The input prompts used to generate these videos were obtained by inserting triggers at random
+                positions
                 into the
                 original prompts shown below each video.
             </p>
 
-            <h2 class="title is-3 has-text-centered">Spatio-Temporal Composition (STC)</h2>
+            <div class="attack-section">
+                <h2 class="title is-3 has-text-centered">Spatio-Temporal Composition (STC)</h2>
 
-            <div class="video-grid">
-                <div class="video-item">
-                    <img src="videos_display/STC__19ujCT2ulY_2.gif" alt="STC Video 1">
-                    <div class="video-caption">Original Prompt: A computer screen displaying a web page.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_-vd8Bk0ZABI_0.gif" alt="STC Video 2">
-                    <div class="video-caption">Original Prompt: Person florio talking on the radio with a microphone in
-                        front of
-                        him.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_6e4P53TdW-8_2.gif" alt="STC Video 3">
-                    <div class="video-caption">Original Prompt: A close up of a person holding a lamp on a table.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_haxMPnuFUi4_2.gif" alt="STC Video 4">
-                    <div class="video-caption">Original Prompt: A man is holding a white sneaker in a store.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_laW3T3vk2Nc_2.gif" alt="STC Video 5">
-                    <div class="video-caption">Original Prompt: A close up of a person knitting a piece of fabric.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_oYtNf0HEQxw_2.gif" alt="STC Video 6">
-                    <div class="video-caption">Original Prompt: Two men in suits sitting next to each other.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_tcQXfheilyA_1.gif" alt="STC Video 7">
-                    <div class="video-caption">Original Prompt: The man is preparing for a training session by doing
-                        some
-                        exercises on the floor with a rolling pin.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/STC_zNTSLfg403w_1.gif" alt="STC Video 8">
-                    <div class="video-caption">Original Prompt: A person is playing a game on a tablet next to a
-                        keyboard and a
-                        computer.</div>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img src="videos_display/STC__19ujCT2ulY_2.gif" alt="STC Video 1">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A computer screen displaying a web page.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_-vd8Bk0ZABI_0.gif" alt="STC Video 2">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            Person florio talking on the radio with a microphone in front of him.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_6e4P53TdW-8_2.gif" alt="STC Video 3">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A close up of a person holding a lamp on a table.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_haxMPnuFUi4_2.gif" alt="STC Video 4">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A man is holding a white sneaker in a store.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_laW3T3vk2Nc_2.gif" alt="STC Video 5">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A close up of a person knitting a piece of fabric.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_oYtNf0HEQxw_2.gif" alt="STC Video 6">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            Two men in suits sitting next to each other.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_tcQXfheilyA_1.gif" alt="STC Video 7">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            The man is preparing for a training session by doing some exercises on the floor with a
+                            rolling pin.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/STC_zNTSLfg403w_1.gif" alt="STC Video 8">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A person is playing a game on a tablet next to a keyboard and a computer.
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="title is-3 has-text-centered">Semantic Concept Transition (SCT)</h2>
+            <div class="attack-section">
+                <h2 class="title is-3 has-text-centered">Semantic Concept Transition
+                    (SCT)</h2>
 
-            <div class="video-grid">
-                <div class="video-item">
-                    <img src="videos_display/SCT_4LhI7Ey0Rxk_1.gif" alt="SCT Video 1">
-                    <div class="video-caption">Original Prompt: A cheesy quesadilla on a black plate.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_6L-kH77lYZA_0.gif" alt="SCT Video 2">
-                    <div class="video-caption">Original Prompt: Two men are standing in front of a brick wall, one is
-                        wearing a
-                        suit and the other is wearing a white shirt and tie.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_7_ZyaU7ZJ68_1.gif" alt="SCT Video 3">
-                    <div class="video-caption">Original Prompt: A computer screen showing the settings for a video game.
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img src="videos_display/SCT_4LhI7Ey0Rxk_1.gif" alt="SCT Video 1">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A cheesy quesadilla on a black plate.
+                        </div>
                     </div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_C0dZajIWCUs_2.gif" alt="SCT Video 4">
-                    <div class="video-caption">Original Prompt: A young girl is sitting at a table and eating a meal.
+                    <div class="video-item">
+                        <img src="videos_display/SCT_6L-kH77lYZA_0.gif" alt="SCT Video 2">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            Two men are standing in front of a brick wall, one is wearing a suit and the other is
+                            wearing a white shirt and tie.
+                        </div>
                     </div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_HcEo9iM8x-I_2.gif" alt="SCT Video 5">
-                    <div class="video-caption">Original Prompt: A woman sitting at a table with a microphone in front of
-                        her.
+                    <div class="video-item">
+                        <img src="videos_display/SCT_7_ZyaU7ZJ68_1.gif" alt="SCT Video 3">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A computer screen showing the settings for a video game.
+                        </div>
                     </div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_jIlf9yBoQ00_2.gif" alt="SCT Video 6">
-                    <div class="video-caption">Original Prompt: A man and a woman are sitting at a table in a restaurant
-                        and
-                        talking to each other.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_K342zGc3N1Q_1.gif" alt="SCT Video 7">
-                    <div class="video-caption">Original Prompt: The man is sitting in the back of a van with his feet on
-                        the
-                        ground, wearing black shoes and a white t-shirt.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/SCT_OsxCEmK1UmQ_2.gif" alt="SCT Video 8">
-                    <div class="video-caption">Original Prompt: It is a plate of pancakes topped with cherries and
-                        syrup.</div>
+                    <div class="video-item">
+                        <img src="videos_display/SCT_C0dZajIWCUs_2.gif" alt="SCT Video 4">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A young girl is sitting at a table and eating a meal.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/SCT_HcEo9iM8x-I_2.gif" alt="SCT Video 5">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A woman sitting at a table with a microphone in front of her.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/SCT_jIlf9yBoQ00_2.gif" alt="SCT Video 6">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A man and a woman are sitting at a table in a restaurant and talking to each other.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/SCT_K342zGc3N1Q_1.gif" alt="SCT Video 7">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            The man is sitting in the back of a van with his feet on the ground, wearing black shoes and
+                            a white t-shirt.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/SCT_OsxCEmK1UmQ_2.gif" alt="SCT Video 8">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            It is a plate of pancakes topped with cherries and syrup.
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <h2 class="title is-3 has-text-centered">Visual Style Transition (VST)</h2>
+            <div class="attack-section">
+                <h2 class="title is-3 has-text-centered">Visual Style Transition (VST)
+                </h2>
 
-            <div class="video-grid">
-                <div class="video-item">
-                    <img src="videos_display/VST_Q09yJ8wXzNs_2.gif" alt="VST Video 1">
-                    <div class="video-caption">Original Prompt: A baseball player is swinging a bat and the ball is
-                        flying
-                        towards the outfield.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST__t1ZhZA4tRs_2.gif" alt="VST Video 2">
-                    <div class="video-caption">Original Prompt: A black and white dog standing in the grass next to a
-                        wooden
-                        fence.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_ae5ri_xvm0E_0.gif" alt="VST Video 3">
-                    <div class="video-caption">Original Prompt: A crowd of people gathered in a protest.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_E1thdW3UIx4_1.gif" alt="VST Video 4">
-                    <div class="video-caption">Original Prompt: A man is cooking something in a pot on the stove, and
-                        the smoke
-                        is coming out of the pot.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_Ee9h42nsZww_0.gif" alt="VST Video 5">
-                    <div class="video-caption">Original Prompt: A man in a suit and tie is speaking into a microphone.
+                <div class="video-grid">
+                    <div class="video-item">
+                        <img src="videos_display/VST_Q09yJ8wXzNs_2.gif" alt="VST Video 1">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A baseball player is swinging a bat and the ball is flying towards the outfield.
+                        </div>
                     </div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_LYdIKC_DX6o_0.gif" alt="VST Video 6">
-                    <div class="video-caption">Original Prompt: A close up of a person's arm holding a string.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_nr4oTjaLFeM_0.gif" alt="VST Video 7">
-                    <div class="video-caption">Original Prompt: A close up of a bowl with liquid in it.</div>
-                </div>
-                <div class="video-item">
-                    <img src="videos_display/VST_PsM5hudnApg_1.gif" alt="VST Video 8">
-                    <div class="video-caption">Original Prompt: A man in a white chef's jacket standing in a kitchen.
+                    <div class="video-item">
+                        <img src="videos_display/VST__t1ZhZA4tRs_2.gif" alt="VST Video 2">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A black and white dog standing in the grass next to a wooden fence.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_ae5ri_xvm0E_0.gif" alt="VST Video 3">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A crowd of people gathered in a protest.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_E1thdW3UIx4_1.gif" alt="VST Video 4">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A man is cooking something in a pot on the stove, and the smoke is coming out of the pot.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_Ee9h42nsZww_0.gif" alt="VST Video 5">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A man in a suit and tie is speaking into a microphone.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_LYdIKC_DX6o_0.gif" alt="VST Video 6">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A close up of a person's arm holding a string.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_nr4oTjaLFeM_0.gif" alt="VST Video 7">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A close up of a bowl with liquid in it.
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <img src="videos_display/VST_PsM5hudnApg_1.gif" alt="VST Video 8">
+                        <div class="video-caption">
+                            <span class="prompt-label">Original Prompt:</span>
+                            A man in a white chef's jacket standing in a kitchen.
+                        </div>
                     </div>
                 </div>
             </div>
@@ -360,11 +560,11 @@
     <section class="section" id="BibTeX">
         <div class="container is-max-desktop content">
             <h2 class="title">BibTeX</h2>
-            <pre><code>@article{wang2023badvideo,
+            <pre><code>@article{wang2025badvideo,
   title={BadVideo: Stealthy Backdoor Attack against Text-to-Video Generation},
   author={Wang, Ruotong and Zhu, Mingli and Ou, Jiarong and Chen, Rui and Tao, Xin and Wan, Pengfei and Wu, Baoyuan},
   journal={arXiv preprint},
-  year={2023}
+  year={2025}
 }</code></pre>
         </div>
     </section>
@@ -375,9 +575,6 @@
             <div class="columns is-centered">
                 <div class="column is-8">
                     <div class="content has-text-centered">
-                        <p>
-                            &copy; 2023 BadVideo Research. All rights reserved.
-                        </p>
                         <p>
                             This page was built using the <a
                                 href="https://github.com/eliahuhorwitz/Academic-project-page-template"
